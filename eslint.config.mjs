@@ -21,12 +21,13 @@ export default defineConfig([
             'quotes': ['error', 'single', {
                 'avoidEscape': true,
                 'allowTemplateLiterals': true
-            }]
+            }],
+            'max-len': ['error', { code: 120, ignoreComments: true }],
         }
     },
 
     {
         files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-        languageOptions: { globals: { ...globals.browser }, },
+        languageOptions: { globals: { ...globals.browser, ...globals.jest }, },
     }
 ]);
