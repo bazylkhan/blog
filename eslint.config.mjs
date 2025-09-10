@@ -11,10 +11,9 @@ export default defineConfig([
         ...pluginReact.configs.flat.recommended,
         rules: {
             ...pluginReact.configs.flat.recommended.rules,
-            'react/jsx-indent': [2,4],
-            indent: [2,4],
+            'react/jsx-indent': [2, 4],
+            indent: [2, 4],
             'react/react-in-jsx-scope': 'off',
-            // "no-unused-vars": "warn",
             '@typescript-eslint/no-unused-vars': 'warn',
             'react/require-default-props': 'off',
             'react/no-deprecated': 'off',
@@ -28,6 +27,6 @@ export default defineConfig([
 
     {
         files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-        languageOptions: { globals: { ...globals.browser } },
+        languageOptions: { globals: { ...globals.browser }, },
     }
 ]);
